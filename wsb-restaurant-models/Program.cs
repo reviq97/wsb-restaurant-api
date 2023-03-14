@@ -10,7 +10,7 @@ namespace wsb_restaurant_models
     {
         static void Main(string[] args)
         {
-
+            Console.WriteLine("Hello World!");
         }
     }
 }
