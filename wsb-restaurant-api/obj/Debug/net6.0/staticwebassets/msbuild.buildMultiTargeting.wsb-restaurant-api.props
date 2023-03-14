@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\wsb-restaurant-api.props" />
+</Project>

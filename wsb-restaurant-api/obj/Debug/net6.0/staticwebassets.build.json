@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "FokZWtlb/zMxQpYEmx0zyP61vWarcL8n0eKw5RWHULI=",
+  "Source": "wsb-restaurant-api",
+  "BasePath": "_content/wsb-restaurant-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
