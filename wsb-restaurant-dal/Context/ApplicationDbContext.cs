@@ -38,7 +38,7 @@ namespace wsb_restaurant_models.Repository
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
+            
         }
     }
 }
