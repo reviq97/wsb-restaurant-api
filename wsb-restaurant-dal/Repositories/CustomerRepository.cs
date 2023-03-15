@@ -5,11 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using wsb_restaurant_dal.Contracts;
 using wsb_restaurant_models.EFMigration.Models.Entities;
+using wsb_restaurant_models.Repository;
 
 namespace wsb_restaurant_dal.Repositories
 {
     internal class CustomerRepository : ICustomerRepository
     {
+        private readonly ApplicationDbContext _applicationDbContext;
+
+        public CustomerRepository(ApplicationDbContext applicationDbContext)
+        {
+            _applicationDbContext = applicationDbContext;
+        }
         public void Delete(int customerId)
         {
             throw new NotImplementedException();
