@@ -9,6 +9,7 @@ namespace wsb_restaurant_models.EFMigration.Models.Entities
     public class OrderStatus
     {
         public int Id { get; set; }
+        public int OrderDetailId { get; set; }
         public string Status { get; set; }
     }
 }
