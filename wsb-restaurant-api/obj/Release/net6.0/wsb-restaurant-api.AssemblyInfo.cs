@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("718d6a1c-fcef-44d9-8420-c6ffb9ad519a")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("wsb-restaurant-api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

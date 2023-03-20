@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "US3VUBkoXIYAVWGnwKXMvBm9ASx3zZKBrxq0OrDHJ23ZUGZZ4BOcZfGZs7pxBIwVzEvpxjU/mVPdaw2EzQadZg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\nway\\source\\repos\\wsb-restaurant-api\\wsb-restaurant-application\\wsb-restaurant-application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nway\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

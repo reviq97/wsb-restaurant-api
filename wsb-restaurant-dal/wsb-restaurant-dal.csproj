@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\wsb-restaurant-models\wsb-restaurant-models.csproj" />
+    <ProjectReference Include="..\wsb-restaurant-models\wsb-restaurant-domain.csproj" />
   </ItemGroup>
 
 </Project>

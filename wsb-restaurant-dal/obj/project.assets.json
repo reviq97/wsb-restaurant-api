@@ -315,7 +315,7 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "wsb-restaurant-models/1.0.0": {
+      "wsb-restaurant-domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -324,10 +324,10 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": "6.0.8"
         },
         "compile": {
-          "bin/placeholder/wsb-restaurant-models.dll": {}
+          "bin/placeholder/wsb-restaurant-domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/wsb-restaurant-models.dll": {}
+          "bin/placeholder/wsb-restaurant-domain.dll": {}
         }
       }
     }
@@ -727,15 +727,15 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "wsb-restaurant-models/1.0.0": {
+    "wsb-restaurant-domain/1.0.0": {
       "type": "project",
-      "path": "../wsb-restaurant-models/wsb-restaurant-models.csproj",
-      "msbuildProject": "../wsb-restaurant-models/wsb-restaurant-models.csproj"
+      "path": "../wsb-restaurant-models/wsb-restaurant-domain.csproj",
+      "msbuildProject": "../wsb-restaurant-models/wsb-restaurant-domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "wsb-restaurant-models >= 1.0.0"
+      "wsb-restaurant-domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -771,8 +771,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\nway\\source\\repos\\wsb-restaurant-api\\wsb-restaurant-models\\wsb-restaurant-models.csproj": {
-              "projectPath": "C:\\Users\\nway\\source\\repos\\wsb-restaurant-api\\wsb-restaurant-models\\wsb-restaurant-models.csproj"
+            "C:\\Users\\nway\\source\\repos\\wsb-restaurant-api\\wsb-restaurant-models\\wsb-restaurant-domain.csproj": {
+              "projectPath": "C:\\Users\\nway\\source\\repos\\wsb-restaurant-api\\wsb-restaurant-models\\wsb-restaurant-domain.csproj"
             }
           }
         }

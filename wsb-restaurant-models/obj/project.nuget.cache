@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TsDlnF2i1HMrpUKlpu1Yg/XZUjlMnGBfq9hZJfsWFN5GU7FwWSnWjgdrG9QA2tP53EbpucwsXPP3TnzIpmL8Wg==",
+  "dgSpecHash": "tEe6SuNXyLKj4iBHifsUanKYOq7we9NCr+AB8XRLUeniBRaFj+oRzBZzrXwp5A1/J+1v9vVU23od2HU/FqHT1w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nway\\source\\repos\\wsb-restaurant-api\\wsb-restaurant-models\\wsb-restaurant-models.csproj",
+  "projectFilePath": "C:\\Users\\nway\\source\\repos\\wsb-restaurant-api\\wsb-restaurant-models\\wsb-restaurant-domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nway\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\nway\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.14\\microsoft.entityframeworkcore.6.0.14.nupkg.sha512",

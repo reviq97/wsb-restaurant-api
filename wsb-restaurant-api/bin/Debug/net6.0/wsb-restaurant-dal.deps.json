@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "wsb-restaurant-dal/1.0.0": {
         "dependencies": {
-          "wsb-restaurant-models": "1.0.0"
+          "wsb-restaurant-domain": "1.0.0"
         },
         "runtime": {
           "wsb-restaurant-dal.dll": {}
@@ -191,14 +191,14 @@
         }
       },
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
-      "wsb-restaurant-models/1.0.0": {
+      "wsb-restaurant-domain/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.14",
           "Npgsql": "6.0.9",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "6.0.8"
         },
         "runtime": {
-          "wsb-restaurant-models.dll": {}
+          "wsb-restaurant-domain.dll": {}
         }
       }
     }
@@ -335,7 +335,7 @@
       "path": "system.runtime.compilerservices.unsafe/6.0.0",
       "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
     },
-    "wsb-restaurant-models/1.0.0": {
+    "wsb-restaurant-domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

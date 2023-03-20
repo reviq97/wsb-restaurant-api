@@ -33,8 +33,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\nway\\source\\repos\\wsb-restaurant-api\\wsb-restaurant-models\\wsb-restaurant-models.csproj": {
-                "projectPath": "C:\\Users\\nway\\source\\repos\\wsb-restaurant-api\\wsb-restaurant-models\\wsb-restaurant-models.csproj"
+              "C:\\Users\\nway\\source\\repos\\wsb-restaurant-api\\wsb-restaurant-models\\wsb-restaurant-domain.csproj": {
+                "projectPath": "C:\\Users\\nway\\source\\repos\\wsb-restaurant-api\\wsb-restaurant-models\\wsb-restaurant-domain.csproj"
               }
             }
           }
@@ -68,12 +68,12 @@
         }
       }
     },
-    "C:\\Users\\nway\\source\\repos\\wsb-restaurant-api\\wsb-restaurant-models\\wsb-restaurant-models.csproj": {
+    "C:\\Users\\nway\\source\\repos\\wsb-restaurant-api\\wsb-restaurant-models\\wsb-restaurant-domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nway\\source\\repos\\wsb-restaurant-api\\wsb-restaurant-models\\wsb-restaurant-models.csproj",
-        "projectName": "wsb-restaurant-models",
-        "projectPath": "C:\\Users\\nway\\source\\repos\\wsb-restaurant-api\\wsb-restaurant-models\\wsb-restaurant-models.csproj",
+        "projectUniqueName": "C:\\Users\\nway\\source\\repos\\wsb-restaurant-api\\wsb-restaurant-models\\wsb-restaurant-domain.csproj",
+        "projectName": "wsb-restaurant-domain",
+        "projectPath": "C:\\Users\\nway\\source\\repos\\wsb-restaurant-api\\wsb-restaurant-models\\wsb-restaurant-domain.csproj",
         "packagesPath": "C:\\Users\\nway\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\nway\\source\\repos\\wsb-restaurant-api\\wsb-restaurant-models\\obj\\",
         "projectStyle": "PackageReference",
