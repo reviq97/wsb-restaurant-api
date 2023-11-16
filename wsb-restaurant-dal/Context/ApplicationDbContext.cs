@@ -4,10 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using wsb_restaurant_models.EFMigration.Models.Entities;
-using wsb_restaurant_models.EFMigration.Models.LinkingTables;
+using wsb_restaurant_domain.Models.Entities;
 
-namespace wsb_restaurant_models.Repository
+namespace wsb_restaurant_dal.Context
 {
     public class ApplicationDbContext : DbContext
     {
@@ -33,6 +32,7 @@ namespace wsb_restaurant_models.Repository
         public DbSet<OrderPayment> OrderPayments { get; set; }
         public DbSet<RestaurantAddress> RestaurantAddresses { get; set; }
         public DbSet<RestaurantDish> RestaurantDishes { get; set; }
+        public DbSet<User> Users { get; set; }
 
 
 

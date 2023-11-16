@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using wsb_restaurant_application.Services.Authentication;
-using wsb_restaurant_models.Dtos;
+using wsb_restaurant_domain.Dtos;
 
 namespace wsb_restaurant_api.Controllers
 {
-    [Route("auth")]
+    [Route("api/v1/auth")]
     [ApiController]
     public class AuthenticationController : ControllerBase
     {
@@ -20,7 +20,7 @@ namespace wsb_restaurant_api.Controllers
         {
             var authResponse = _authenticationService.Login(loginRequest.email, loginRequest.password);
             var requestResponse = new AuthenticationResult(authResponse.id, authResponse.firstName, authResponse.lastName, authResponse.email, authResponse.token);
-            return Ok(loginRequest);
+            return Ok(requestResponse);
         }
 
         [HttpPost("register")]

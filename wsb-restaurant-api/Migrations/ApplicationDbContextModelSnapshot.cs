@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using wsb_restaurant_models.Repository;
+using wsb_restaurant_dal.Context;
 
 #nullable disable
 
@@ -17,12 +17,12 @@ namespace wsb_restaurant_api.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.14")
+                .HasAnnotation("ProductVersion", "6.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("wsb_restaurant_models.EFMigration.Models.Entities.Address", b =>
+            modelBuilder.Entity("wsb_restaurant_domain.Models.Entities.Address", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -51,7 +51,7 @@ namespace wsb_restaurant_api.Migrations
                     b.ToTable("Addresses");
                 });
 
-            modelBuilder.Entity("wsb_restaurant_models.EFMigration.Models.Entities.Contact", b =>
+            modelBuilder.Entity("wsb_restaurant_domain.Models.Entities.Contact", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -72,7 +72,7 @@ namespace wsb_restaurant_api.Migrations
                     b.ToTable("Contacts");
                 });
 
-            modelBuilder.Entity("wsb_restaurant_models.EFMigration.Models.Entities.Customer", b =>
+            modelBuilder.Entity("wsb_restaurant_domain.Models.Entities.Customer", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -97,7 +97,45 @@ namespace wsb_restaurant_api.Migrations
                     b.ToTable("Customers");
                 });
 
-            modelBuilder.Entity("wsb_restaurant_models.EFMigration.Models.Entities.Dish", b =>
+            modelBuilder.Entity("wsb_restaurant_domain.Models.Entities.CustomerAddress", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AddressId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("CustomerId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CustomerAddresses");
+                });
+
+            modelBuilder.Entity("wsb_restaurant_domain.Models.Entities.CustomerContact", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ContactId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("CustomerId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CustomerContacts");
+                });
+
+            modelBuilder.Entity("wsb_restaurant_domain.Models.Entities.Dish", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -125,7 +163,7 @@ namespace wsb_restaurant_api.Migrations
                     b.ToTable("Dishes");
                 });
 
-            modelBuilder.Entity("wsb_restaurant_models.EFMigration.Models.Entities.Employee", b =>
+            modelBuilder.Entity("wsb_restaurant_domain.Models.Entities.Employee", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -154,7 +192,74 @@ namespace wsb_restaurant_api.Migrations
                     b.ToTable("Employees");
                 });
 
-            modelBuilder.Entity("wsb_restaurant_models.EFMigration.Models.Entities.OrderDetails", b =>
+            modelBuilder.Entity("wsb_restaurant_domain.Models.Entities.EmployeeAddress", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AddressId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("EmployeeId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("EmployeeAddresses");
+                });
+
+            modelBuilder.Entity("wsb_restaurant_domain.Models.Entities.EmployeeContact", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ContactId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("EmployeeId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("EmployeeContacts");
+                });
+
+            modelBuilder.Entity("wsb_restaurant_domain.Models.Entities.Order", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("DishId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("FoodOrderId")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime>("OrderRequestDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("OrderType")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("wsb_restaurant_domain.Models.Entities.OrderDetails", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -188,7 +293,26 @@ namespace wsb_restaurant_api.Migrations
                     b.ToTable("OrderDetails");
                 });
 
-            modelBuilder.Entity("wsb_restaurant_models.EFMigration.Models.Entities.OrderStatus", b =>
+            modelBuilder.Entity("wsb_restaurant_domain.Models.Entities.OrderPayment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("FoodOrder")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("PaymentId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("OrderPayments");
+                });
+
+            modelBuilder.Entity("wsb_restaurant_domain.Models.Entities.OrderStatus", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -208,7 +332,7 @@ namespace wsb_restaurant_api.Migrations
                     b.ToTable("OrderStatuses");
                 });
 
-            modelBuilder.Entity("wsb_restaurant_models.EFMigration.Models.Entities.Payment", b =>
+            modelBuilder.Entity("wsb_restaurant_domain.Models.Entities.Payment", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -232,7 +356,7 @@ namespace wsb_restaurant_api.Migrations
                     b.ToTable("Payments");
                 });
 
-            modelBuilder.Entity("wsb_restaurant_models.EFMigration.Models.Entities.Restaurant", b =>
+            modelBuilder.Entity("wsb_restaurant_domain.Models.Entities.Restaurant", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -263,131 +387,7 @@ namespace wsb_restaurant_api.Migrations
                     b.ToTable("Restaurants");
                 });
 
-            modelBuilder.Entity("wsb_restaurant_models.EFMigration.Models.LinkingTables.CustomerAddress", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("AddressId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("CustomerId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("CustomerAddresses");
-                });
-
-            modelBuilder.Entity("wsb_restaurant_models.EFMigration.Models.LinkingTables.CustomerContact", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("ContactId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("CustomerId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("CustomerContacts");
-                });
-
-            modelBuilder.Entity("wsb_restaurant_models.EFMigration.Models.LinkingTables.EmployeeAddress", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("AddressId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("EmployeeId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("EmployeeAddresses");
-                });
-
-            modelBuilder.Entity("wsb_restaurant_models.EFMigration.Models.LinkingTables.EmployeeContact", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("ContactId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("EmployeeId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("EmployeeContacts");
-                });
-
-            modelBuilder.Entity("wsb_restaurant_models.EFMigration.Models.LinkingTables.Order", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("DishId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("FoodOrderId")
-                        .HasColumnType("integer");
-
-                    b.Property<DateTime>("OrderRequestDate")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("OrderType")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Orders");
-                });
-
-            modelBuilder.Entity("wsb_restaurant_models.EFMigration.Models.LinkingTables.OrderPayment", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("FoodOrder")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("PaymentId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("OrderPayments");
-                });
-
-            modelBuilder.Entity("wsb_restaurant_models.EFMigration.Models.LinkingTables.RestaurantAddress", b =>
+            modelBuilder.Entity("wsb_restaurant_domain.Models.Entities.RestaurantAddress", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -406,7 +406,7 @@ namespace wsb_restaurant_api.Migrations
                     b.ToTable("RestaurantAddresses");
                 });
 
-            modelBuilder.Entity("wsb_restaurant_models.EFMigration.Models.LinkingTables.RestaurantDish", b =>
+            modelBuilder.Entity("wsb_restaurant_domain.Models.Entities.RestaurantDish", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -423,6 +423,33 @@ namespace wsb_restaurant_api.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("RestaurantDishes");
+                });
+
+            modelBuilder.Entity("wsb_restaurant_domain.Models.Entities.User", b =>
+                {
+                    b.Property<Guid>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("email")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("firstName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("lastName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("password")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Users");
                 });
 #pragma warning restore 612, 618
         }

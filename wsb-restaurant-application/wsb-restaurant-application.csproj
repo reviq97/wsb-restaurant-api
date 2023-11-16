@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -10,6 +10,11 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\wsb-restaurant-dal\wsb-restaurant-dal.csproj" />
+    <ProjectReference Include="..\wsb-restaurant-domain\wsb-restaurant-domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,15 @@
+C:\Users\nway\source\repos\wsb-restaurant-api\wsb-restaurant-domain\bin\Debug\net6.0\wsb-restaurant-domain.exe
+C:\Users\nway\source\repos\wsb-restaurant-api\wsb-restaurant-domain\bin\Debug\net6.0\wsb-restaurant-domain.deps.json
+C:\Users\nway\source\repos\wsb-restaurant-api\wsb-restaurant-domain\bin\Debug\net6.0\wsb-restaurant-domain.runtimeconfig.json
+C:\Users\nway\source\repos\wsb-restaurant-api\wsb-restaurant-domain\bin\Debug\net6.0\wsb-restaurant-domain.dll
+C:\Users\nway\source\repos\wsb-restaurant-api\wsb-restaurant-domain\bin\Debug\net6.0\wsb-restaurant-domain.pdb
+C:\Users\nway\source\repos\wsb-restaurant-api\wsb-restaurant-domain\obj\Debug\net6.0\wsb-restaurant-domain.csproj.AssemblyReference.cache
+C:\Users\nway\source\repos\wsb-restaurant-api\wsb-restaurant-domain\obj\Debug\net6.0\wsb-restaurant-domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nway\source\repos\wsb-restaurant-api\wsb-restaurant-domain\obj\Debug\net6.0\wsb-restaurant-domain.AssemblyInfoInputs.cache
+C:\Users\nway\source\repos\wsb-restaurant-api\wsb-restaurant-domain\obj\Debug\net6.0\wsb-restaurant-domain.AssemblyInfo.cs
+C:\Users\nway\source\repos\wsb-restaurant-api\wsb-restaurant-domain\obj\Debug\net6.0\wsb-restaurant-domain.csproj.CoreCompileInputs.cache
+C:\Users\nway\source\repos\wsb-restaurant-api\wsb-restaurant-domain\obj\Debug\net6.0\wsb-restaurant-domain.dll
+C:\Users\nway\source\repos\wsb-restaurant-api\wsb-restaurant-domain\obj\Debug\net6.0\refint\wsb-restaurant-domain.dll
+C:\Users\nway\source\repos\wsb-restaurant-api\wsb-restaurant-domain\obj\Debug\net6.0\wsb-restaurant-domain.pdb
+C:\Users\nway\source\repos\wsb-restaurant-api\wsb-restaurant-domain\obj\Debug\net6.0\wsb-restaurant-domain.genruntimeconfig.cache
+C:\Users\nway\source\repos\wsb-restaurant-api\wsb-restaurant-domain\obj\Debug\net6.0\ref\wsb-restaurant-domain.dll

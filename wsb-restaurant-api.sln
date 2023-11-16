@@ -5,13 +5,13 @@ VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wsb-restaurant-api", "wsb-restaurant-api\wsb-restaurant-api.csproj", "{6FC89ED7-6850-40BA-A082-287BDD0D76D0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wsb-restaurant-domain", "wsb-restaurant-models\wsb-restaurant-domain.csproj", "{F2B9B756-F5CF-44F4-94F0-68194EF18B68}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wsb-restaurant-dal", "wsb-restaurant-dal\wsb-restaurant-dal.csproj", "{9A950B6E-AA01-4CC2-B7DC-C0C6709CF399}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wsb-restaurant-application", "wsb-restaurant-application\wsb-restaurant-application.csproj", "{EF8F59DB-83F2-4030-A108-70A3F326F3B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wsb-restaurant-application", "wsb-restaurant-application\wsb-restaurant-application.csproj", "{EF8F59DB-83F2-4030-A108-70A3F326F3B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wsb-restaurant-infrastructure", "wsb-restaurant-infrastructure\wsb-restaurant-infrastructure.csproj", "{6F78A4B1-64B5-4631-A444-7EB05CE28816}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wsb-restaurant-infrastructure", "wsb-restaurant-infrastructure\wsb-restaurant-infrastructure.csproj", "{6F78A4B1-64B5-4631-A444-7EB05CE28816}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wsb-restaurant-domain", "wsb-restaurant-domain\wsb-restaurant-domain.csproj", "{D7F48397-C438-4DFA-8287-29814F69D3C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,6 @@ Global
 		{6FC89ED7-6850-40BA-A082-287BDD0D76D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FC89ED7-6850-40BA-A082-287BDD0D76D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FC89ED7-6850-40BA-A082-287BDD0D76D0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F2B9B756-F5CF-44F4-94F0-68194EF18B68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F2B9B756-F5CF-44F4-94F0-68194EF18B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F2B9B756-F5CF-44F4-94F0-68194EF18B68}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F2B9B756-F5CF-44F4-94F0-68194EF18B68}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9A950B6E-AA01-4CC2-B7DC-C0C6709CF399}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9A950B6E-AA01-4CC2-B7DC-C0C6709CF399}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A950B6E-AA01-4CC2-B7DC-C0C6709CF399}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{6F78A4B1-64B5-4631-A444-7EB05CE28816}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F78A4B1-64B5-4631-A444-7EB05CE28816}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F78A4B1-64B5-4631-A444-7EB05CE28816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7F48397-C438-4DFA-8287-29814F69D3C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7F48397-C438-4DFA-8287-29814F69D3C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7F48397-C438-4DFA-8287-29814F69D3C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7F48397-C438-4DFA-8287-29814F69D3C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

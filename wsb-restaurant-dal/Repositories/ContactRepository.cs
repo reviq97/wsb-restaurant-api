@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using wsb_restaurant_dal.Context;
 using wsb_restaurant_dal.Contracts;
-using wsb_restaurant_models.EFMigration.Models.Entities;
-using wsb_restaurant_models.Repository;
+using wsb_restaurant_domain.Models.Entities;
 
 namespace wsb_restaurant_dal.Repositories
 {
-    internal class ContactRepository : IContactRepository
+    public class ContactRepository : IContactRepository
     {
         private readonly ApplicationDbContext _applicationDbContext;
 

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using wsb_restaurant_dal.Context;
 using wsb_restaurant_dal.Contracts;
-using wsb_restaurant_models.EFMigration.Models.LinkingTables;
-using wsb_restaurant_models.Repository;
+using wsb_restaurant_domain.Models.Entities;
 
 namespace wsb_restaurant_dal.Repositories
 {
