@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using wsb_restaurant_application.Common.Interfaces;
 using wsb_restaurant_infrastructure.Authentication;
 using Microsoft.Extensions.Configuration;
+using wsb_restaurant_application.Common.Authentication;
 
 namespace wsb_restaurant_infrastructure
 {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace wsb_restaurant_application.Common.Interfaces
+namespace wsb_restaurant_application.Common.Authentication
 {
     public interface IJwtTokenGenerator
     {

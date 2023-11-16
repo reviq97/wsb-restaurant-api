@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -12,38 +13,41 @@ namespace wsb_restaurant_dal.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        private readonly ApplicationDbContext _applicationDbContext;
+        private readonly ApplicationDbContext applicationDbContext;
 
         public UserRepository(ApplicationDbContext applicationDbContext)
         {
-            _applicationDbContext = applicationDbContext;
+            this.applicationDbContext = applicationDbContext;
         }
-        public Task DeleteAsync(Guid User)
+        public async Task DeleteAsync(Guid User)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<User>> GetAll()
+        public async Task<IEnumerable<User>> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public Task<User> FindAsync(Expression<Func<User, bool>> predicate)
+        public async Task<User> FindAsync(Expression<Func<User, bool>> predicate)
+        {
+            var foundUser = await applicationDbContext.Users.FirstOrDefaultAsync(predicate);
+
+            return foundUser;
+        }
+
+        public async Task InsertAsync(User user)
+        {
+            await applicationDbContext.AddAsync(user);
+            applicationDbContext.SaveChanges();
+        }
+
+        public async Task SaveAsync()
         {
             throw new NotImplementedException();
         }
 
-        public Task InsertAsync(User user)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task SaveAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task UpdateAsync(User User)
+        public async Task UpdateAsync(User User)
         {
             throw new NotImplementedException();
         }
